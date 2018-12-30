@@ -19,6 +19,24 @@ module.exports = NodeHelper.create({
 		}, 60000); // 1min
 	},
 
+	activateRetryScheduele: function () {
+		var self = this;
+		if (this.retrytimer === undefined) {
+			self.log("Activating retry schedule.");
+			this.retrytimer = setInterval(function () {
+				self.getTodaysNames();
+			}, 60000 * 5); // 5min
+		}
+	},
+
+	deactivateRetryScheduele: function () {
+		var self = this;
+		if (this.retrytimer !== undefined) {
+			self.log("Deactivating retry schedule.");
+			clearInterval(this.retrytimer);
+		}
+	},
+
 	isFivePastMidnight: function () {
 		return moment().format("HH:mm") == moment().hour(0).minute(5).format("HH:mm")
 	},
@@ -35,10 +53,12 @@ module.exports = NodeHelper.create({
 			.then(function (result) {
 				var names = self.parseNames(result);
 				self.sendSocketNotification("NEW_NAMES", names)
+				self.deactivateRetryScheduele();
 			})
 			.catch(function (error) {
-				self.log(": Problems with " + name + ": " + error);
-				self.sendSocketNotification("SERVICE_FAILURE", { erorr: error });
+				self.log(": Error: " + error);
+				self.sendSocketNotification("SERVICE_FAILURE", error);
+				self.activateRetryScheduele();
 			});
 	},
 

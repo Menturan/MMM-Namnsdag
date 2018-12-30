@@ -37,25 +37,25 @@ Module.register("MMM-Namnsdag", {
 		headerHtml.innerHTML = "Namnsdag";
 		headerHtml.style = "margin-bottom: 5px;text-align: center;";
 		wrapper.appendChild(headerHtml);
-		if (!this.loaded) {
-			wrapper.innerHTML = "Hämtar dagens namn...";
-			wrapper.className = "dimmed light small";
-			return wrapper;
-		}
-
 		var container = document.createElement("div");
-		this.names.forEach(name => {
-			var p = document.createElement("p");
-			p.style = "margin-top: 0px;margin-bottom: 0px;";
-			p.innerHTML = name;
-			container.appendChild(p);
-		});
-		// container.innerHTML = this.names[0] + "</br>" + this.names[1];
-		container.className = "bright small";
+		if (!this.loaded) {
+			container.innerHTML = "Hämtar dagens namn...";
+			container.className = "dimmed light small";
+		} else if (this.failure !== undefined) {
+			container.innerHTML = "Fel! Försöker igen om 5min.";
+			container.className = "dimmed light small";
+		} else {
+			this.names.forEach(name => {
+				var p = document.createElement("p");
+				p.style = "margin-top: 0px;margin-bottom: 0px;";
+				p.innerHTML = name;
+				container.appendChild(p);
+			});
+			// container.innerHTML = this.names[0] + "</br>" + this.names[1];
+			container.className = "bright small";
+		}
 		container.style = "text-align: center;";
-
 		wrapper.appendChild(container);
-
 		return wrapper;
 	},
 
@@ -70,7 +70,8 @@ Module.register("MMM-Namnsdag", {
 		}
 		if (notification == "SERVICE_FAILURE") {
 			this.failure = payload;
-			Log.log("Service failure: " + this.failure.StatusCode + ":" + this.failure.Message);
+			this.loaded = true;
+			Log.log("Service failure: " + this.failure.code + ":" + this.failure.message);
 			this.updateDom();
 		}
 	},
