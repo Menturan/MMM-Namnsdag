@@ -10,7 +10,7 @@ Module.register("MMM-Namnsdag", {
 
 	// Required scripts
 	getScripts: function () {
-		return ['moment.js'];
+		return ["moment.js"];
 	},
 
 	getStyles: function () {
@@ -27,9 +27,9 @@ Module.register("MMM-Namnsdag", {
 		this.config.language = config.language;
 		moment.locale(config.language);
 		this.loaded = false;
-		this.sendSocketNotification('SETUP', this.config); // Send config to helper and initiate an update
+		this.sendSocketNotification("SETUP", this.config); // Send config to helper and initiate an update
 	},
-	
+
 	getDom: function () {
 		var wrapper = document.createElement("div");
 		wrapper.style = "width: -moz-fit-content;";
@@ -53,7 +53,7 @@ Module.register("MMM-Namnsdag", {
 		// container.innerHTML = this.names[0] + "</br>" + this.names[1];
 		container.className = "bright small";
 		container.style = "text-align: center;";
-	
+
 		wrapper.appendChild(container);
 
 		return wrapper;
@@ -70,14 +70,14 @@ Module.register("MMM-Namnsdag", {
 		}
 		if (notification == "SERVICE_FAILURE") {
 			this.failure = payload;
-			Log.log("Service failure: " + this.failure.StatusCode + ':' + this.failure.Message);
+			Log.log("Service failure: " + this.failure.StatusCode + ":" + this.failure.Message);
 			this.updateDom();
 		}
 	},
 
 	debugLog: function (msg) {
 		if (this.config.debug) {
-			Log.log('[' + (new Date(Date.now())).toLocaleTimeString() + '] - DEBUG - ' + this.name + ' - ' + new Error().lineNumber + ' - : ' + msg);
+			Log.log("[" + (new Date(Date.now())).toLocaleTimeString() + "] - DEBUG - " + this.name + " - " + new Error().lineNumber + " - : " + msg);
 		}
 	}
 });
