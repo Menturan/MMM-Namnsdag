@@ -19,7 +19,7 @@ This module uses Yarn.
 ``` json
 {
     module: "MMM-Namnsdag",
-    position: 'bottom_right',
+    position: "bottom_right",
 }
 ```
 ## Development
