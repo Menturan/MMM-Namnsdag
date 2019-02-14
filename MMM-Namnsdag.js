@@ -44,7 +44,7 @@ Module.register("MMM-Namnsdag", {
 		} else if (this.failure !== undefined) {
 			container.innerHTML = "Fel! Försöker igen om 5min.";
 			container.className = "dimmed light small";
-		} else if (names.lenght === 0) {
+		} else if (this.names.lenght === 0) {
 			container.innerHTML = "Ingen har namnsdag";
 			container.className = "dimmed light small";
 		} else {
