@@ -1,6 +1,16 @@
 # MMM-Namnsdag
 Magic Mirror module that displays Swedish names of the day. Relys on [Svenska Dagar Api](https://api.dryg.net/).
 
+![David](https://img.shields.io/david/Menturan/MMM-Namnsdag.svg?style=flat-square)
+![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/Menturan/MMM-Namnsdag.svg?style=flat-square)
+![LGTM Alerts](https://img.shields.io/lgtm/alerts/g/Menturan/MMM-Namnsdag.svg?style=flat-square)
+![LGTM Grade](https://img.shields.io/lgtm/grade/javascript/g/Menturan/MMM-Namnsdag.svg?style=flat-square)
+![Yarn](https://img.shields.io/badge/dependency%20manager-Yarn-blue.svg?style=flat-square)
+
+![Maintenance](https://img.shields.io/maintenance/yes/2019.svg?style=flat-square)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/Menturan/MMM-Namnsdag.svg?style=flat-square)
+![GitHub](https://img.shields.io/github/license/Menturan/MMM-Namnsdag.svg?style=flat-square)
+
 ## Screenshot
 ![Screenshot](screenshot.png)
 
