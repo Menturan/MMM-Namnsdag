@@ -18,7 +18,7 @@ Module.register("MMM-Namnsdag", {
 	},
 
 	getHeader: function () {
-		return this.data.header + "Hello Header!";
+		return this.data.header;
 	},
 
 	// Start the module
@@ -33,10 +33,6 @@ Module.register("MMM-Namnsdag", {
 	getDom: function () {
 		var wrapper = document.createElement("div");
 		wrapper.style = "width: -moz-fit-content;";
-		var headerHtml = document.createElement("header");
-		headerHtml.innerHTML = "Namnsdag";
-		headerHtml.style = "margin-bottom: 5px;text-align: center;";
-		wrapper.appendChild(headerHtml);
 		var container = document.createElement("div");
 		if (!this.loaded) {
 			container.innerHTML = "Hämtar dagens namn...";

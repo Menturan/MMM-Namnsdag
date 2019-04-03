@@ -5,8 +5,13 @@ Magic Mirror module that displays Swedish names of the day. Relys on [Svenska Da
 ![Screenshot](screenshot.png)
 
 ## Install
-This module uses Yarn.
-1. `yarn install`
+This module uses [Yarn](https://yarnpkg.com/lang/en/).
+```sh
+  cd ~/MagicMirror/modules
+  git clone https://github.com/Menturan/MMM-Namnsdag.git
+  cd MMM-Namnsdag
+  yarn install
+```
 
 ## Configuration
 
@@ -20,6 +25,7 @@ This module uses Yarn.
 {
     module: "MMM-Namnsdag",
     position: "bottom_right",
+    header: "Namnsdag"
 }
 ```
 ## Development
