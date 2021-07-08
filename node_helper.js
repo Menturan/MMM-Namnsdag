@@ -44,7 +44,7 @@ module.exports = NodeHelper.create({
 	getTodaysNames: function () {
 		var self = this;
 		self.log("Fetching todays names");
-		var url = "https://api.dryg.net/dagar/v2.1/";
+		var url = "https://sholiday.faboul.se/dagar/v2.1/";
 		self.debugLog(": Calling " + url);
 		fetch(url)
 			.then(function (response) {
