@@ -7,7 +7,7 @@ Magic Mirror module that displays Swedish names of the day. Relys on [Svenska Da
 ![LGTM Grade](https://img.shields.io/lgtm/grade/javascript/g/Menturan/MMM-Namnsdag.svg?style=flat-square)
 ![Yarn](https://img.shields.io/badge/dependency%20manager-Yarn-blue.svg?style=flat-square)
 
-![Maintenance](https://img.shields.io/maintenance/yes/2019.svg?style=flat-square)
+![Maintenance](https://img.shields.io/maintenance/yes/2021.svg?style=flat-square)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/Menturan/MMM-Namnsdag.svg?style=flat-square)
 ![GitHub](https://img.shields.io/github/license/Menturan/MMM-Namnsdag.svg?style=flat-square)
 
@@ -25,7 +25,7 @@ This module uses [Yarn](https://yarnpkg.com/lang/en/).
 
 ## Configuration
 
-| Key | Value | Required | Default | Description | 
+| Key | Value | Required | Default | Description |
 |-----|-------|---------|---------|---------|
 |debug|_boolean_| N| false| Debug output. |
 
