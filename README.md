@@ -2,7 +2,7 @@
 Magic Mirror module that displays Swedish names of the day. Relys on [Svenska Dagar Api](https://api.dryg.net/).
 
 [![Known Vulnerabilities](https://snyk.io/test/github/Menturan/MMM-Namnsdag/badge.svg)](https://snyk.io/test/github/Menturan/MMM-Namnsdag)
-![Maintenance](https://img.shields.io/maintenance/yes/2021.svg?style=flat-square)
+![Maintenance](https://img.shields.io/maintenance/yes/2023.svg?style=flat-square)
 ![GitHub](https://img.shields.io/github/license/Menturan/MMM-Namnsdag.svg?style=flat-square)
 
 ## Screenshot
